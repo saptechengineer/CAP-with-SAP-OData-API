@@ -1,0 +1,27 @@
+{
+  "name": "CAP-on-AWS-Project3",
+  "version": "1.0.0",
+  "description": "CAP on AWS Project3 (CAP with SAP OData API)",
+  "repository": "https://github.com/saptechengineer/CAP-with-SAP-OData-API",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/postgres": "^1.4.1",
+    "@sap-cloud-sdk/http-client": "^3.9.0",
+    "@sap-cloud-sdk/resilience": "^3.9.0",
+    "@sap/cds": "^7",
+    "@sap/cds-dk": "^7.5.0",
+    "express": "^4"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "ECEmploymentInformation": {
+        "kind": "odata-v2",
+        "model": "srv/external/ECEmploymentInformation"
+      }
+    }
+  }
+}
